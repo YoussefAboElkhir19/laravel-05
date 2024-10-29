@@ -11,9 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->string('roles')->default('user')->after('password')->change();
-        });
+    Schema::table('authors' , function (Blueprint $table) {
+        $table->text('date')->after('name');
+    });
     }
 
     /**
@@ -21,8 +21,9 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->string('roles')->default('guest')->after('password')->change();
+        Schema::table('authors' , function (Blueprint $table) {
+            $table->$table->dropColumn('date');
+
         });
-    }
+  }
 };

@@ -12,6 +12,7 @@ Route::get('/about', action: function () {
     return view('static/about');
 });
 
+
 // Route::get('contact', function () {
 //     return view('static.contact');
 // });

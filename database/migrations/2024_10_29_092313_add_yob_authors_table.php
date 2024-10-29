@@ -11,10 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('post_statuses', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+        Schema::table('authors', function (Blueprint $table) {
+            $table->year('yob');
         });
+
     }
 
     /**
@@ -22,6 +22,9 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('post_statuses');
-    }
+Schema::table('authors' , function (Blueprint $table )
+{
+    $table->$table->dropColumn('yob');
+});
+}
 };
