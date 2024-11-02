@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SupplierController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\BookController;
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -93,3 +95,7 @@ Route::prefix('posts')
     });
 
 Route::resource('posts', PostController::class);
+
+
+
+Route::resource('books', BookController::class);

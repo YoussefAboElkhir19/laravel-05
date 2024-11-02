@@ -11,9 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-
-    Schema::table('authors', function (Blueprint $table) {
-            $table->string('name');
+        Schema::create('languages', function (Blueprint $table) {
+            $table->id();
+            $table->char('lang');
+            $table->timestamps();
         });
     }
 
@@ -22,8 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn('name');
-        });
+        Schema::dropIfExists('languages');
     }
 };
