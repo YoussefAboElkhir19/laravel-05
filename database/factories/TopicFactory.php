@@ -18,6 +18,7 @@ class TopicFactory extends Factory
     {
         return [
             //
+            'topic' => fake()->text(100)
         ];
     }
 }

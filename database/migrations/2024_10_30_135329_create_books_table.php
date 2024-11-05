@@ -9,6 +9,7 @@ use App\Models\User;
 use App\Models\Author;
 use App\Models\Language;
 use App\Models\Topic;
+
 return new class extends Migration
 {
     /**
@@ -24,7 +25,6 @@ return new class extends Migration
             $table->foreignIdFor(Author::class)->constrained();
             $table->foreignIdFor(Language::class)->constrained();
             $table->foreignIdFor(Topic::class)->constrained();
-        
             $table->timestamps();
         });
     }
